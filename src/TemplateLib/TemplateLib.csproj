@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net452;netstandard2.0</TargetFrameworks>
+		<AssemblyName>TemplateLib</AssemblyName>
+    <PackageId>TemplateRepo</PackageId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net452|AnyCPU'">
+    <DocumentationFile>bin\Debug\net452\TemplateLib.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net452|AnyCPU'">
+    <DocumentationFile>bin\Release\net452\TemplateLib.xml</DocumentationFile>
+  </PropertyGroup>
+
+	<!-- Nuget References -->
+	<!-- Common Packages with support for all target frameworks
+	<ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+  </ItemGroup>
+	-->
+	<!-- netstandard2.0 packages only
+	<ItemGroup Condition=" '$(TargetFramework)' != 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+  </ItemGroup>
+	-->
+	<!-- net452 packages only
+	<ItemGroup Condition=" '$(TargetFramework)' != 'net452' ">
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+  </ItemGroup>
+	-->
+
+	<!-- References -->
+	<!-- Common Packages with support for all target frameworks
+	<ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+	-->
+	<!-- netstandard2.0 packages only
+	<ItemGroup Condition=" '$(TargetFramework)' != 'netstandard2.0' ">
+    <Reference Include="System.Collections.Concurrent" />
+  </ItemGroup>
+	-->
+	<!-- net452 packages only
+	<ItemGroup Condition=" '$(TargetFramework)' != 'net452' ">
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+	-->
+
+	<!-- Project References -->
+	<!--
+	<ItemGroup>
+    <ProjectReference Include="..\DependencyLibrary\DependencyLibrary.csproj" />
+  </ItemGroup>
+	-->
+</Project>

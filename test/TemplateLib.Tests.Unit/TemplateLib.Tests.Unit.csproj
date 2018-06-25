@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net452;netstandard2.0</TargetFrameworks>
+    <IsPackable>false</IsPackable>
+    <Configurations>Debug;Release</Configurations>
+  </PropertyGroup>
+	
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.7.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
+    <PackageReference Include="xunit" Version="2.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\TemplateLib\TemplateLib.csproj" />
+  </ItemGroup>
+
+  <!-- Nuget References -->
+	<!-- Common Packages with support for all target frameworks
+	<ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+  </ItemGroup>
+	-->
+	<!-- netstandard2.0 packages only
+	<ItemGroup Condition=" '$(TargetFramework)' != 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+  </ItemGroup>
+	-->
+	<!-- net452 packages only
+	<ItemGroup Condition=" '$(TargetFramework)' != 'net452' ">
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
+  </ItemGroup>
+	-->
+
+	<!-- References -->
+	<!-- Common Packages with support for all target frameworks
+	<ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+	-->
+	<!-- netstandard2.0 packages only
+	<ItemGroup Condition=" '$(TargetFramework)' != 'netstandard2.0' ">
+    <Reference Include="System.Collections.Concurrent" />
+  </ItemGroup>
+	-->
+	<!-- net452 packages only
+	<ItemGroup Condition=" '$(TargetFramework)' != 'net452' ">
+    <Reference Include="Microsoft.CSharp" />
+  </ItemGroup>
+	-->
+
+	<!-- Project References -->
+	<!--
+	<ItemGroup>
+    <ProjectReference Include="..\DependencyLibrary\DependencyLibrary.csproj" />
+  </ItemGroup>
+	-->
+
+</Project>
